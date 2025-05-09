@@ -1,10 +1,6 @@
 import random
 
 
-def crear_tablero(filas, columnas):
-    return [[random.choice([0, 1]) for _ in range(columnas)] for _ in range(filas)]
-
-
 def contar_vecinas_vivas(tablero, x, y):
     filas = len(tablero)
     columnas = len(tablero[0])
@@ -14,7 +10,7 @@ def contar_vecinas_vivas(tablero, x, y):
     vivas = 0
     for dx, dy in vecinas:
         nx, ny = x + dx, y + dy
-        if 0 <= nx < filas and 0 <= ny < columnas:
+        if 0 <= nx < filas and 0 <= ny < columnas: 
             vivas += tablero[nx][ny]
     return vivas
 
